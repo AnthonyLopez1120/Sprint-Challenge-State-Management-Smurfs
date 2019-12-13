@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import axios from "axios"
+import {addSmurf} from '../actions'
+import { connect } from "react-redux"
 
-const Form = () => {
+const Form = (props) => {
     const [smurf, setSmurf] = useState({
         name: "",
         age: 0,
@@ -14,13 +16,7 @@ const Form = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        axios.post("http://localhost:3333/smurfs", smurf)
-        .then(res => {
-            console.log(res)
-        })
-        .catch(err => {
-            console.log(err.message)
-        })
+        props.addSmurf(smurf)
         setSmurf({
             name: "",
             age: 0,
@@ -52,4 +48,6 @@ const Form = () => {
     )
 }
 
-export default Form
+const mapStateToProps = state=>({})
+
+export default connect(mapStateToProps, {addSmurf})(Form)
