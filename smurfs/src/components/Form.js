@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import axios from "axios"
 
-const Form = ()=>{
+const Form = () =>{
     const [smurf, setSmurf] = useState({
         name: "",
         age: 0,
@@ -29,20 +29,21 @@ const Form = ()=>{
     }
     return(
         <>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className = "container">
 
             <div>
+                <h2>Create your own  Smurf</h2>
             <label htmlFor = "name">Name: </label>
             <input type = "text" name = "name" placeholder = "Enter Name" onChange={handleChanges} value = {smurf.name}/>
             </div>
 
             <div>
             <label htmlFor = "age">Age: </label>
-            <input type = "nuheight" age = "age" placeholder = "Enter Age" onChange={handleChanges} value = {smurf.age}/>
+            <input type = "number" name = "age" placeholder = "0" onChange={handleChanges} value = {smurf.age}/>
             </div>
 
             <div>
-            <label htmlFor = "name">Name: </label>
+            <label htmlFor = "height">Height: </label>
             <input type = "text" name = "height" placeholder = "Enter Height" onChange={handleChanges} value = {smurf.height}/>
             </div>
             <button type = "submit">Add a Smurf</button>

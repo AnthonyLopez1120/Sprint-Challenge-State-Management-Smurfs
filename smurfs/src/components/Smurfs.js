@@ -3,10 +3,10 @@ import { connect } from "react-redux"
 import Smurf from "./Smurf"
 import { grabSmurf } from "../actions"
 
-const Smurfs = props =>{
+ function Smurfs(props){
 
     useEffect(() => {
-        props.grabSmurf()
+        props.grabSmurf();
     }, [])
 
     return(
