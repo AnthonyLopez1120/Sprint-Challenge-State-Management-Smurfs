@@ -3,7 +3,7 @@ import "./App.css";
 import Smurfs from "./Smurfs"
 import Form from "./Form"
 
-const App = props =>{
+const App = props => {
   
     return (
       <div className="App">

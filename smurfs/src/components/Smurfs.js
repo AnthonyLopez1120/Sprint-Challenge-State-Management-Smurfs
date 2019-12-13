@@ -11,12 +11,13 @@ import { grabSmurf } from "../actions"
 
     return(
         <>
-        {props.isFetching && <p className = "fetch">Fetching</p>}
+        {props.isFetching && <p>Fetching</p>}
         {props.data && <div>
             {props.data.map(smurf => (
                 <Smurf key = {smurf.id} name = {smurf.name} age = {smurf.age} height = {smurf.height}/>
             ))}
-        </div>}
+        </div>
+        }
         </>
     )
 }
@@ -27,4 +28,4 @@ const mapStateToProps = state =>({
     isFetching: state.isFetching
 })
 
-export default connect(mapStateToProps, {grabSmurf})(Smurfs) 
+export default connect(mapStateToProps, { grabSmurf })(Smurfs) 

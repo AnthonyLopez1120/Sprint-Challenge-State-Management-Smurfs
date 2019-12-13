@@ -1,24 +1,24 @@
 import React, { useState } from "react"
 import axios from "axios"
 
-const Form = () =>{
+const Form = () => {
     const [smurf, setSmurf] = useState({
         name: "",
         age: 0,
         height: ""
     })
     
-    const handleChanges = e =>{
+    const handleChanges = e => {
         setSmurf({...smurf, [e.target.name]: e.target.value})
     }
 
-    const handleSubmit = e =>{
+    const handleSubmit = e => {
         e.preventDefault()
         axios.post("http://localhost:3333/smurfs", smurf)
-        .then(res=>{
+        .then(res => {
             console.log(res)
         })
-        .catch(err=>{
+        .catch(err => {
             console.log(err.message)
         })
         setSmurf({
