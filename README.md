@@ -12,7 +12,7 @@ You have three hours to complete this challenge. Plan your time accordingly.
 
 ## Commits
 
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons and your project manager).
+Commit your code regularly and meaningfully This helps both you (in case you ever need to return to old code for any number of reasons and your project manager).
 
 ## Description
 
@@ -23,10 +23,22 @@ In this challenge, you are to build a Smurfs village utilizing context or Redux 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What problem does the context API help solve?
+    No more prop drillin !!!
+
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
-- [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+    Actions- handlers to determine what function to activate in a reducer
+    Reducers- Returns a new state
+    Store- a state object 
+
+- [ ] What is the difference between Application state and Component state? When would  be a good time to use one over the other?
+    Application State- The state is global to the app 
+    Component State- State is local to only the component
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+    Async
+
 - [ ] What is your favorite state management system you've learned and this sprint? Please explain why!
+  Context seemed easier at first, but I am leaning towards Redux now because all the cool kids are doing it
 
 ## Project Set Up
 
